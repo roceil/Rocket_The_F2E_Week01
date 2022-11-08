@@ -1,69 +1,212 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="./dist/output.css">
-  <title>Document</title>
-  <!-- google icon -->
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
-</head>
-</head>
-<body>
-  <header class="py-6">
-    <div class="container flex justify-between items-center">
-      <div class="flex items-center">
-        <img class="mr-8" src="./dist/img/Frame 220.png" alt="">
-        <ul class="lg:flex space-x-10 hidden">
-          <li><a class="text-primary01 text-xl" href="#">關卡資訊</a></li>
-          <li><a class="text-primary01 text-xl" href="#">作品列表</a></li>
-          <li><a class="text-primary01 text-xl" href="#">攻略資源</a></li>
-          <li><a class="text-primary01 text-xl" href="#">求職專區</a></li>
-        </ul>
-      </div>
-      <div   class="flex justify-between items-center">
-        <a class="btn" href="#">註冊報名</a>
-        <a class="hidden lg:block btn mr-0" href="#">登入</a>
-        <a href="#" class="lg:hidden">
-          <span class="material-symbols-outlined text-Secondary01 shrink-0">
-            menu
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./dist/output.css" />
+    <title>Document</title>
+    <!-- google icon -->
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0"
+    />
+  </head>
+
+  <body>
+    <header class="py-6">
+      <div class="container flex items-center justify-between">
+        <div class="flex items-center">
+          <img class="mr-8" src="./dist/img/Frame 220.png" alt="" />
+          <ul class="hidden space-x-10 lg:flex">
+            <li><a class="text-xl text-primary01" href="#">關卡資訊</a></li>
+            <li><a class="text-xl text-primary01" href="#">作品列表</a></li>
+            <li><a class="text-xl text-primary01" href="#">攻略資源</a></li>
+            <li><a class="text-xl text-primary01" href="#">求職專區</a></li>
+          </ul>
+        </div>
+        <div class="flex items-center justify-between">
+          <a class="btn" href="#">註冊報名</a>
+          <a class="btn mr-0 hidden lg:block" href="#">登入</a>
+          <a href="#" class="lg:hidden">
+            <span class="material-symbols-outlined text-Secondary01 shrink-0">
+              menu
             </span>
-        </a>
+          </a>
+        </div>
       </div>
-    </div>
-  </header>
-  <main class="container">
-    <section class="border border-b-0 border-secondary01 relative">
-      <img class="lg:hidden" src="./dist/img/Frame 218.png" alt="banner--sm">
-      <img class="hidden lg:block" src="./dist/img/banner-lg.png" alt="banner--lg">
-      <img class="absolute top-[30%] md:top-[10%] lg:top-[5%] lg:w-[300px] xl:w-auto w-[142px]" src="./dist/img/bannerKids.png" alt="banner-kids">
-      <h2 class="text-primary01 text-xl absolute top-[68.5%] right-[7.5%] md:text-[30px] md:top-[69.5%] md:right-[7%] tracking-[0.135em] lg:text-[32px] lg:top-[64%] lg:right-[7%] xl:text-[42px]" >The F2E 4th 互動式網頁設計</h2>
-    </section>
-    
-    <section class="bg-[#fdf7e8] py-10 border-x border-secondary01">
-      <div class="text-center">
-        <h3 class="text-2xl mb-20">你是否也遇到以下問題？</h3>
-        <ul class="px-6 flex flex-col gap-[31px]">
-          <li class="border border-secondary01 py-4 rounded-[10px] relative bg-white">
-          <img src="./dist/img/kid01.png" alt="kid" class="w-20 absolute -top-20">
+    </header>
+    <main class="container">
+      <section class="relative border border-b-0 border-secondary01">
+        <img
+          class="lg:hidden"
+          src="./dist/img/Frame 218.png"
+          alt="banner--sm"
+        />
+        <img
+          class="hidden lg:block"
+          src="./dist/img/banner-lg.png"
+          alt="banner--lg"
+        />
+        <img
+          class="absolute top-[30%] w-[142px] md:top-[10%] lg:top-[5%] lg:w-[300px] xl:w-auto"
+          src="./dist/img/bannerKids.png"
+          alt="banner-kids"
+        />
+        <h2
+          class="absolute top-[68.5%] right-[7.5%] text-xl tracking-[0.135em] text-primary01 md:top-[69.5%] md:right-[7%] md:text-[30px] lg:top-[64%] lg:right-[7%] lg:text-[32px] xl:text-[42px]"
+        >
+          The F2E 4th 互動式網頁設計
+        </h2>
+      </section>
+
+      <section class="border-x border-secondary01 bg-[#fdf7e8] py-10 md:py-20 xl:py-[88px]">
+        <div class="text-center">
+          <h3 class="mb-20 text-2xl">你是否也遇到以下問題？</h3>
+          <ul class="container-sm flex flex-col gap-[31px] px-6">
+            <li
+              class="relative rounded-[10px] border border-secondary01 bg-white py-4"
+            >
+              <img
+                src="./dist/img/kid01.png"
+                alt="kid"
+                class="absolute -top-20 w-20"
+              />
+
+              羨慕別人的酷酷網頁動畫？
+            </li>
+            <li
+              class="relative rounded-[10px] border border-secondary01 bg-white py-4"
+            >
+              滿足不了同事的許願？
+              <img
+                src="./dist/img/kid02.png"
+                alt="kid"
+                class="absolute -top-[78px] w-20"
+              />
+            </li>
+
+            <li
+              class="relative rounded-[10px] border border-secondary01 bg-white py-4"
+            >
+              動畫技能樹太雜無從下手？
+              <img
+                src="./dist/img/kid03.png"
+                alt="kid"
+                class="absolute -top-[78px] w-20"
+              />
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="border-x border-secondary01 py-10 md:py-20 xl:py-[88px]">
+        <div class="text-center">
+          <h3 class="mb-12 text-2xl">設計師與工程師進行攜手合作</h3>
+          <!-- 圖片 -->
+          <div class="relative px-6 md:px-[36px] xl:px-[110px]">
+            <!-- todo 平版背景圖 -->
+            <img class=" z-20 md:hidden" src="./dist/img/THE F2E 4TH/WEEK 1/中螢幕 ( 平板 )/4-m-a.png" alt="">
+            <!-- todo 電腦背景圖 -->
+            <img class="hidden md:block w-full" src="./dist/img/THE F2E 4TH/WEEK 1/大螢幕 ( 桌機 )/4-l-a.png" alt="">
+
+            <!-- !黃色小精靈 -->
+            <img class="absolute w-[151px] top-1/2 left-[29px] translate-y-[-50%] md:w-[186px] md:left-[85px] lg:left-[120px] xl:w-[278px]" src="./dist/img/THE F2E 4TH/WEEK 1/大螢幕 ( 桌機 )/4-l-b.png" alt="yellowMan">
+            <!-- !藍色小精靈 -->
+            <img class="absolute w-[151px] top-1/2 right-[29px] translate-y-[-50%] md:w-[186px] md:right-[85px] lg:right-[125px] xl:w-[278px]" src="./dist/img/THE F2E 4TH/WEEK 1/大螢幕 ( 桌機 )/4-l-c.png" alt="blueMan">
             
-            羨慕別人的酷酷網頁動畫？</li>
-          <li class="border border-secondary01 py-4 rounded-[10px] relative bg-white">滿足不了同事的許願？
-            <img src="./dist/img/kid02.png" alt="kid" class="w-20 absolute -top-[78px]">
+            <h3 class="text-xl h-full writing-lr absolute top-1/2 left-1/2 translate-y-[-50%] translate-x-[-50%] text-white leading-[1.2] tracking-[0.15em] md:text-2xl lg:text-[40px] xl:text-5xl">互動式網頁設計</h3>
+          </div>
+        </div>
+      </section>
 
-          </li>
+      <section class="border-x border-secondary01 py-10 md:py-20 xl:py-[88px]">
+        <div class="text-center">
+          <h3 class="mb-4 text-2xl">年度最強合作，三大主題來襲</h3>
+          <p class="mb-12 text-xl">各路廠商強強聯手，共同設計出接地氣的網頁互動挑戰關卡</p>
+          <!-- card -->
+          <ul class="px-6">
+            <li>
+              <div class="flex border border-secondary01 rounded-xl mb-12">
+                <!-- img -->
+                <div class="flex items-center  rounded-l-xl shrink-0">
+                  <img class="rounded-l-xl object-cover" src="./dist/img/THE F2E 4TH/WEEK 1/中螢幕 ( 平板 )/5-s-a.png" alt="">
+                </div>
+                <!-- words -->
+                <div class="flex flex-col items-start pl-4 py-[5px] pr-[21px] justify-center ">
 
-          <li class="border border-secondary01 py-4 rounded-[10px] relative bg-white">動畫技能樹太雜無從下手？
-          <img src="./dist/img/kid03.png" alt="kid" class="w-20 absolute -top-[78px]">
+                  <div class="flex mb-4">
+                    <div class="border border-primary02 py-1 px-4 text-xs">week1</div>
+                    <div class="border bg-primary02  ml-1 py-1 px-4 text-xs">視差滾動</div>
+                  </div>
 
-          </li>
+                  <h4 class="text-xl mb-4 tracking-[0.065em] text-left">The F2E 活動網站設計</h4>
 
-        </ul>
-      </div>
-      
-    </section>
-  </main>
-</body>
+                  <p class="mb-4">贊助商：版塊設計</p>
+                  <div class="w-full border border-secondary01 py-2">
+                    查看關卡細節
+                  </div>
+                </div>
+            </li>
+            <li>
+              <div class="flex border border-secondary01 rounded-xl mb-12">
+                <!-- img -->
+                <div class="flex items-center bg-primary03 rounded-l-xl">
+                  <img class="w-[232px] rounded-l-xl object-cover" src="./dist/img/THE F2E 4TH/WEEK 1/中螢幕 ( 平板 )/5-s-b.png" alt="">
+                </div>
+                <!-- words -->
+                <div class="flex flex-col items-start pl-4 py-[30px] pr-[21px]">
+
+                  <div class="flex mb-4">
+                    <div class="border border-primary03_dark py-1 px-4 text-xs">week2</div>
+                    <div class="border bg-primary03_dark  ml-1 py-1 px-4 text-xs">Canvas</div>
+                  </div>
+
+                  <h4 class="text-xl mb-4 tracking-[0.065em] text-left">今晚，我想來點點簽</h4>
+
+                  <p class="mb-4">贊助商：凱鈿行動設計</p>
+                  <div class="w-full border border-secondary01 py-2">
+                    查看關卡細節
+                  </div>
+                </div>
+            </li>
+            <li>
+              <div class="flex border border-secondary01 rounded-xl">
+                <!-- img -->
+                <div class="flex items-center bg-primary03 rounded-l-xl">
+                  <img class="w-[232px] rounded-l-xl object-cover" src="./dist/img/THE F2E 4TH/WEEK 1/中螢幕 ( 平板 )/5-s-c.png" alt="">
+                </div>
+                <!-- words -->
+                <div class="flex flex-col items-start pl-4 py-[30px] pr-[21px]">
+
+                  <div class="flex mb-4">
+                    <div class="border border-primary01_dark py-1 px-4 text-xs">week3</div>
+                    <div class="border bg-primary01_dark  ml-1 py-1 px-4 text-xs text-white">JS draggable</div>
+                  </div>
+
+                  <h4 class="text-xl mb-4 tracking-[0.065em] text-left">Scrum 新手村</h4>
+
+                  <p class="mb-4">贊助商：鈦坦科技</p>
+                  <div class="w-full border border-secondary01 py-2">
+                    查看關卡細節
+                  </div>
+                </div>
+            </li>
+          </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="border-x border-secondary01 bg-[#fdf7e8] py-10 md:py-20 xl:py-[88px]">
+        <div class="text-center">
+          <h3 class="mb-20 text-2xl">活動說明</h3>
+          
+        </div>
+      </section>
+    </main>
+  </body>
 </html>
