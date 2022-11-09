@@ -25,6 +25,26 @@
       lg:hover:duration-300 
       lg:hover:ease-in-out;
   }
+
+  .parallax-bg01{
+    background-image: url('/dist/img/THE F2E 4TH/WEEK 1/大螢幕 ( 桌機 )/7-l-c.png');
+    height: 735px;
+    /* background-attachment: fixed; */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* @apply bg-[url('/dist/img/THE F2E 4TH/WEEK 1/大螢幕 ( 桌機 )/7-l-c.png')]  h-[735px] bg-fixed bg-center bg-no-repeat bg-cover */
+  }
+
+  .parallax-bg02{
+    background-image: url('/dist/img/THE F2E 4TH/WEEK 1/大螢幕 ( 桌機 )/8-l-a.png');
+    height: 540px;
+    /* background-attachment: fixed; */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* @apply bg-[url('/dist/img/THE F2E 4TH/WEEK 1/大螢幕 ( 桌機 )/7-l-c.png')]  h-[735px] bg-fixed bg-center bg-no-repeat bg-cover */
+  }
 }
 
 @layer utilities {
