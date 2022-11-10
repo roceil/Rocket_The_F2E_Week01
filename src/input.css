@@ -6,6 +6,7 @@
   body {
     font-size: 16px;
     line-height: 1.5;
+    font-family: "Inter", sans-serif;
   }
 }
 
@@ -26,8 +27,8 @@
       lg:hover:ease-in-out;
   }
 
-  .parallax-bg01{
-    background-image: url('/dist/img/THE F2E 4TH/WEEK 1/大螢幕 ( 桌機 )/7-l-c.png');
+  .parallax-bg01 {
+    background-image: url("/dist/img/THE F2E 4TH/WEEK 1/大螢幕 ( 桌機 )/7-l-c.png");
     height: 735px;
     /* background-attachment: fixed; */
     background-position: center;
@@ -36,8 +37,8 @@
     /* @apply bg-[url('/dist/img/THE F2E 4TH/WEEK 1/大螢幕 ( 桌機 )/7-l-c.png')]  h-[735px] bg-fixed bg-center bg-no-repeat bg-cover */
   }
 
-  .parallax-bg02{
-    background-image: url('/dist/img/THE F2E 4TH/WEEK 1/大螢幕 ( 桌機 )/8-l-a.png');
+  .parallax-bg02 {
+    background-image: url("/dist/img/THE F2E 4TH/WEEK 1/大螢幕 ( 桌機 )/8-l-a.png");
     height: 540px;
     /* background-attachment: fixed; */
     background-position: center;
@@ -51,8 +52,17 @@
   .writing-lr {
     writing-mode: vertical-lr;
   }
-  .container-sm{
+  .container-sm {
     max-width: 856px;
     margin: 0 auto;
+  }
+  .loop {
+    display: inline-block;
+    font-family: "Dela Gothic One";
+    font-size: 5rem;
+    color: transparent;
+    white-space: nowrap; /*文字必須設為nowrap，否則文字會自動換行*/
+    height: 100%;
+    -webkit-text-stroke: 1px black;
   }
 }
