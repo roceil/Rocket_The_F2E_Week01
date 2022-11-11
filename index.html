@@ -82,13 +82,14 @@
 
       <!-- 你是否也遇到以下問題? -->
       <section
+      id="problem-sec"
         class="border-x border-secondary01 bg-[#fdf7e8] py-10 md:py-20 xl:py-[88px]"
       >
         <div class="text-center">
           <h3 class="mb-20 text-2xl">你是否也遇到以下問題？</h3>
           <ul class="container-sm flex flex-col gap-[31px] px-6">
             <li
-              class="relative rounded-[10px] border border-secondary01 bg-white py-4"
+              class="relative rounded-[10px] border border-secondary01 bg-white py-4 h-[58px]"
             >
               <img
                 src="./dist/img/kid01.png"
@@ -96,10 +97,10 @@
                 class="absolute -top-20 z-20 w-20"
               />
               <!-- !內容文字用gsap產生 -->
-              <p id="problem-typing1"></p>
+              <p id="problem-typing1">&nbsp</p>
             </li>
             <li
-              class="relative rounded-[10px] border border-secondary01 bg-white py-4"
+              class="relative rounded-[10px] border border-secondary01 bg-white py-4 h-[58px]"
             >
               <img
                 src="./dist/img/kid02.png"
@@ -108,11 +109,11 @@
               />
 
               <!-- !內容文字用gsap產生 -->
-              <p id="problem-typing2"></p>
+              <p id="problem-typing2">&nbsp</p>
             </li>
 
             <li
-              class="relative rounded-[10px] border border-secondary01 bg-white py-4"
+              class="relative rounded-[10px] border border-secondary01 bg-white py-4 h-[58px]"
             >
               <img
                 src="./dist/img/kid03.png"
@@ -121,7 +122,7 @@
               />
 
               <!-- !內容文字用gsap產生 -->
-              <p id="problem-typing3"></p>
+              <p id="problem-typing3">&nbsp</p>
             </li>
           </ul>
         </div>
@@ -461,80 +462,86 @@
       </section>
 
       <!-- 你要修練的都在The F2E -->
-      <section class="relative overflow-hidden border-x border-secondary01">
+      <section  class="relative overflow-hidden border-x border-secondary01">
+        <div id="circle-shit" class="">
+          <ul class="loop leading-none">
+            <li>
+              <span>THE F2E THE F2E THE F2E THE F2E</span>THE F2E THE F2E THE F2E
+              THE F2E<span></span>
+            </li>
+            <li>
+              <span>THE F2E THE F2E THE F2E THE F2E</span>THE F2E THE F2E THE F2E
+              THE F2E<span></span>
+            </li>
+            <li>
+              <span>THE F2E THE F2E THE F2E THE F2E</span>THE F2E THE F2E THE F2E
+              THE F2E<span></span>
+            </li>
+            <li>
+              <span>THE F2E THE F2E THE F2E THE F2E</span>THE F2E THE F2E THE F2E
+              THE F2E<span></span>
+            </li>
+            <li>
+              <span>THE F2E THE F2E THE F2E THE F2E</span>THE F2E THE F2E THE F2E
+              THE F2E<span></span>
+            </li>
+          </ul>
+          <!-- 圓弧鬼東西 -->
+          <div id="circle-inner"  class="">
+            <!-- 圓弧 375px-->
+            <div class="absolute bottom-0 scale-[1.01] md:hidden w-full">
+              <img class="w-full" src="./dist/img/the f2e 湖.png" alt="" />
+            </div>
+            <!-- 圓弧 768px -->
+            <div
+              class="absolute bottom-0 hidden md:block md:scale-[1.05] lg:hidden"
+            >
+              <img src="./dist/img/Vector 4.png" alt="" />
+            </div>
+            <!-- 圓弧 1024px -->
+            <div class="absolute bottom-0 hidden lg:block xl:hidden">
+              <img
+                src="./dist/img/THE F2E 4TH/WEEK 1/大螢幕 ( 桌機 )/Vector 3.png"
+                alt=""
+              />
+            </div>
+            <!-- 圓弧 1320px -->
+            <div class="absolute hidden scale-[1.1] xl:bottom-[-71px] xl:block">
+              <img
+                src="./dist/img/THE F2E 4TH/WEEK 1/大螢幕 ( 桌機 )/Vector 3.png"
+                alt=""
+              />
+            </div>
+            <!-- 圓弧(線) 1024px -->
+            <div
+              class="absolute bottom-[40.1px] hidden lg:left-[0.5%] lg:block xl:hidden"
+            >
+              <img
+                src="./dist/img/THE F2E 4TH/WEEK 1/大螢幕 ( 桌機 )/Line 5.png"
+                alt=""
+              />
+            </div>
+            <!-- 圓弧(線) 1320px -->
+            <div
+              class="absolute hidden scale-[1.1] xl:bottom-[-20px] xl:left-[0.5%] xl:block"
+            >
+              <img
+                src="./dist/img/THE F2E 4TH/WEEK 1/大螢幕 ( 桌機 )/Line 5.png"
+                alt=""
+              />
+            </div>
+            <!--  報名 btn -->
+            <div class="absolute bottom-0 w-full text-center">
+              <h3 class="mb-2 text-2xl font-semibold">你要修練的都在The F2E</h3>
+              <p class="mb-[42.5px]">三週精實修練，一次提升實力</p>
+              <a class="btn mb-[35.5px] mr-0 inline-block md:mb-[44px]" href="#"
+                >我要報名</a
+              >
+            </div>
+          </div>
+
+        </div>
         <!-- 跑馬燈 -->
-        <ul class="loop leading-none">
-          <li>
-            <span>THE F2E THE F2E THE F2E THE F2E</span>THE F2E THE F2E THE F2E
-            THE F2E<span></span>
-          </li>
-          <li>
-            <span>THE F2E THE F2E THE F2E THE F2E</span>THE F2E THE F2E THE F2E
-            THE F2E<span></span>
-          </li>
-          <li>
-            <span>THE F2E THE F2E THE F2E THE F2E</span>THE F2E THE F2E THE F2E
-            THE F2E<span></span>
-          </li>
-          <li>
-            <span>THE F2E THE F2E THE F2E THE F2E</span>THE F2E THE F2E THE F2E
-            THE F2E<span></span>
-          </li>
-          <li>
-            <span>THE F2E THE F2E THE F2E THE F2E</span>THE F2E THE F2E THE F2E
-            THE F2E<span></span>
-          </li>
-        </ul>
-        <!-- 圓弧 375px-->
-        <div class="absolute bottom-0 scale-[1.01] md:hidden">
-          <img src="./dist/img/the f2e 湖.png" alt="" />
-        </div>
-        <!-- 圓弧 768px -->
-        <div
-          class="absolute bottom-0 hidden md:block md:scale-[1.05] lg:hidden"
-        >
-          <img src="./dist/img/Vector 4.png" alt="" />
-        </div>
-        <!-- 圓弧 1024px -->
-        <div class="absolute bottom-0 hidden lg:block xl:hidden">
-          <img
-            src="./dist/img/THE F2E 4TH/WEEK 1/大螢幕 ( 桌機 )/Vector 3.png"
-            alt=""
-          />
-        </div>
-        <!-- 圓弧 1320px -->
-        <div class="absolute hidden scale-[1.1] xl:bottom-[-71px] xl:block">
-          <img
-            src="./dist/img/THE F2E 4TH/WEEK 1/大螢幕 ( 桌機 )/Vector 3.png"
-            alt=""
-          />
-        </div>
-        <!-- 圓弧(線) 1024px -->
-        <div
-          class="absolute bottom-[40.1px] hidden lg:left-[0.5%] lg:block xl:hidden"
-        >
-          <img
-            src="./dist/img/THE F2E 4TH/WEEK 1/大螢幕 ( 桌機 )/Line 5.png"
-            alt=""
-          />
-        </div>
-        <!-- 圓弧(線) 1320px -->
-        <div
-          class="absolute hidden scale-[1.1] xl:bottom-[-20px] xl:left-[0.5%] xl:block"
-        >
-          <img
-            src="./dist/img/THE F2E 4TH/WEEK 1/大螢幕 ( 桌機 )/Line 5.png"
-            alt=""
-          />
-        </div>
-        <!--  報名 btn -->
-        <div class="absolute bottom-0 w-full text-center">
-          <h3 class="mb-2 text-2xl font-semibold">你要修練的都在The F2E</h3>
-          <p class="mb-[42.5px]">三週精實修練，一次提升實力</p>
-          <a class="btn mb-[35.5px] mr-0 inline-block md:mb-[44px]" href="#"
-            >我要報名</a
-          >
-        </div>
       </section>
       <!-- <section
         class="parallax-bg02 border-x border-secondary01 py-10 md:py-20 xl:py-[88px]"
@@ -553,7 +560,7 @@
         class="-mt-[500px container border-x border-secondary01 bg-[#fdf7e8] py-10 md:py-20 xl:py-[88px]"
       >
         <div class="text-center">
-          <h3 class="mb-20 text-2xl lg:text-[32px]">贊助單位</h3>
+          <h3 class="mb-8  text-2xl lg:text-[32px]">贊助單位</h3>
         </div>
         <div class="flex justify-center">
           <!-- 板塊設計 -->

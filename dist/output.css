@@ -851,6 +851,10 @@ body {
   margin-top: 0.5rem;
 }
 
+.mb-8 {
+  margin-bottom: 2rem;
+}
+
 .box-border {
   box-sizing: border-box;
 }
@@ -955,10 +959,6 @@ body {
   height: 1rem;
 }
 
-.h-screen {
-  height: 100vh;
-}
-
 .h-full {
   height: 100%;
 }
@@ -981,6 +981,18 @@ body {
 
 .h-1 {
   height: 0.25rem;
+}
+
+.h-\[58px\] {
+  height: 58px;
+}
+
+.h-\[\] {
+  height: ;
+}
+
+.h-\[400px\] {
+  height: 400px;
 }
 
 .w-4 {
@@ -2139,10 +2151,6 @@ body {
   padding: 0.5rem;
 }
 
-.p-10 {
-  padding: 2.5rem;
-}
-
 .py-6 {
   padding-top: 1.5rem;
   padding-bottom: 1.5rem;
@@ -2188,16 +2196,20 @@ body {
   padding-right: 2rem;
 }
 
+.pb-10 {
+  padding-bottom: 2.5rem;
+}
+
+.pt-10 {
+  padding-top: 2.5rem;
+}
+
 .pl-4 {
   padding-left: 1rem;
 }
 
 .pr-\[21px\] {
   padding-right: 21px;
-}
-
-.pt-10 {
-  padding-top: 2.5rem;
 }
 
 .pb-\[140px\] {
@@ -2218,10 +2230,6 @@ body {
 
 .pb-\[42\.75px\] {
   padding-bottom: 42.75px;
-}
-
-.pb-10 {
-  padding-bottom: 2.5rem;
 }
 
 .text-left {
@@ -2290,6 +2298,10 @@ body {
   line-height: 2rem;
 }
 
+.text-\[8px\] {
+  font-size: 8px;
+}
+
 .text-xs {
   font-size: 0.75rem;
   line-height: 1rem;
@@ -2302,14 +2314,6 @@ body {
 
 .text-\[14px\] {
   font-size: 14px;
-}
-
-.text-\[20px\] {
-  font-size: 20px;
-}
-
-.text-\[8px\] {
-  font-size: 8px;
 }
 
 .font-semibold {
@@ -2433,10 +2437,6 @@ body {
 .text-blue-500 {
   --tw-text-opacity: 1;
   color: rgb(59 130 246 / var(--tw-text-opacity));
-}
-
-.text-\[px\] {
-  color: px;
 }
 
 .underline {
@@ -2941,20 +2941,20 @@ body {
     padding-bottom: 40px;
   }
 
-  .md\:pl-10 {
-    padding-left: 2.5rem;
-  }
-
-  .md\:pb-\[225px\] {
-    padding-bottom: 225px;
+  .md\:pb-20 {
+    padding-bottom: 5rem;
   }
 
   .md\:pt-20 {
     padding-top: 5rem;
   }
 
-  .md\:pb-20 {
-    padding-bottom: 5rem;
+  .md\:pl-10 {
+    padding-left: 2.5rem;
+  }
+
+  .md\:pb-\[225px\] {
+    padding-bottom: 225px;
   }
 
   .md\:text-\[30px\] {
@@ -3171,16 +3171,16 @@ body {
     padding-right: 110px;
   }
 
+  .xl\:pb-\[88px\] {
+    padding-bottom: 88px;
+  }
+
   .xl\:pt-\[88px\] {
     padding-top: 88px;
   }
 
   .xl\:pb-\[149px\] {
     padding-bottom: 149px;
-  }
-
-  .xl\:pb-\[88px\] {
-    padding-bottom: 88px;
   }
 
   .xl\:text-\[42px\] {

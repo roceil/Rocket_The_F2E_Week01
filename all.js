@@ -50,56 +50,60 @@ sm_540.add("(min-width: 540px)", () => {
 });
 
 // 你是否也遇到以下問題-打字
-gsap.to("#problem-typing1", {
-  text: "你是否也遇到以下問題？",
-  duration: 2,
-  ease: "none",
-  scrollTrigger: {
-    trigger: "#problem-typing1",
-    triggerAcrions: "play pause resume reset",
-  },
-});
+const problem_sec = document.querySelector("#problem-sec");
+ScrollTrigger.create({
+  trigger: problem_sec,
+  start: "-20%",
+  onEnter: () => {
+    gsap.to("#problem-typing1", {
+      text: "你是否也遇到以下問題？",
+      duration: 1.5,
+      ease: "none",
+      scrollTrigger: {
+        trigger: "#problem-typing1",
+        triggerAcrions: "play pause resume reset",
+      },
+    });
 
-gsap.to("#problem-typing2", {
-  text: "滿足不了同事的許願？",
-  duration: 2,
-  ease: "none",
-  scrollTrigger: {
-    trigger: "#problem-typing2",
-    triggerAcrions: "play pause resume reset",
-  },
-});
+    gsap.to("#problem-typing2", {
+      text: "滿足不了同事的許願？",
+      duration: 1.5,
+      delay: 1,
+      ease: "none",
+      scrollTrigger: {
+        trigger: "#problem-typing2",
+        triggerAcrions: "play pause resume reset",
+      },
+    });
 
-gsap.to("#problem-typing3", {
-  text: "動畫技能樹太雜無從下手？",
-  duration: 2,
-  ease: "none",
-  scrollTrigger: {
-    trigger: "#problem-typing3",
-    triggerAcrions: "play pause resume reset",
+    gsap.to("#problem-typing3", {
+      text: "動畫技能樹太雜無從下手？",
+      duration: 1.5,
+      delay: 1.5,
+      ease: "none",
+      scrollTrigger: {
+        trigger: "#problem-typing3",
+        triggerAcrions: "play pause resume reset",
+      },
+    });
   },
 });
 
 // 與工程師攜手合作-小精靈動畫
-// #yellow_kids
-// #blue_kids
-
 const scroll = gsap.timeline({
   scrollTrigger: {
-    start: "top",
+    start: "top top",
     end: "+=500",
     trigger: "#kids-pic", // 決定scrolltrigger要以哪一個元素作為觸發基準點
-    markers: true, // 開啟start & end標記點，單純方便瀏覽動畫開始與結束點
+    markers: false, // 開啟start & end標記點，單純方便瀏覽動畫開始與結束點
     scrub: true, //重要！開啟scrub來決定動畫播放是否依賴視窗滾動
     pin: true,
   },
 });
-
 scroll.from("#yellow_kids", {
   x: -300,
   duration: 1,
 });
-
 scroll.from(
   "#blue_kids",
   {
@@ -111,4 +115,20 @@ scroll.from(
 scroll.to("#kids-h3", {
   fontSize: "26px",
   duration: 1,
+});
+
+//你要修練的鬼東西動畫
+const circle_tl = gsap.timeline({
+  scrollTrigger: {
+    start: "-300px",
+    end: "10px",
+    trigger: "#circle-shit", // 決定scrolltrigger要以哪一個元素作為觸發基準點
+    markers: true, // 開啟start & end標記點，單純方便瀏覽動畫開始與結束點
+    scrub: true, //重要！開啟scrub來決定動畫播放是否依賴視窗滾動
+    // pin:true,
+  },
+});
+
+circle_tl.from("#circle-inner", {
+  y: "400px",
 });
