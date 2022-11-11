@@ -49,8 +49,14 @@
     </header>
     <main class="container">
       <!-- banner -->
-      <section id="banner-start"  class=" relative border border-b-0 border-secondary01">
-        <div id="banner-kids-bg" class="absolute bg-[#FDF7E7] w-4 h-4 top-[214px] left-[58px]"></div>
+      <section
+        id="banner-start"
+        class="relative border border-b-0 border-secondary01"
+      >
+        <div
+          id="banner-kids-bg"
+          class="absolute top-[214px] left-[58px] h-4 w-4 bg-[#FDF7E7]"
+        ></div>
         <img
           class="w-full lg:hidden"
           src="./dist/img/Frame 218.png"
@@ -63,7 +69,7 @@
         />
         <img
           id="banner-kids"
-          class=" absolute top-[30%] w-[142px] md:top-[29%] lg:top-[5%] lg:w-[300px] xl:w-auto"
+          class="absolute top-[30%] w-[142px] md:top-[29%] lg:top-[5%] lg:w-[300px] xl:w-auto"
           src="./dist/img/bannerKids.png"
           alt="banner-kids"
         />
@@ -87,39 +93,45 @@
               <img
                 src="./dist/img/kid01.png"
                 alt="kid"
-                class="absolute -top-20 w-20"
+                class="absolute -top-20 z-20 w-20"
               />
-
-              羨慕別人的酷酷網頁動畫？
+              <!-- !內容文字用gsap產生 -->
+              <p id="problem-typing1"></p>
             </li>
             <li
               class="relative rounded-[10px] border border-secondary01 bg-white py-4"
             >
-              滿足不了同事的許願？
               <img
                 src="./dist/img/kid02.png"
                 alt="kid"
                 class="absolute -top-[78px] w-20"
               />
+
+              <!-- !內容文字用gsap產生 -->
+              <p id="problem-typing2"></p>
             </li>
 
             <li
               class="relative rounded-[10px] border border-secondary01 bg-white py-4"
             >
-              動畫技能樹太雜無從下手？
               <img
                 src="./dist/img/kid03.png"
                 alt="kid"
                 class="absolute -top-[78px] w-20"
               />
+
+              <!-- !內容文字用gsap產生 -->
+              <p id="problem-typing3"></p>
             </li>
           </ul>
         </div>
-      </section>
+      </section> 
 
       <!-- 設計師與工程師進行攜手合作 -->
-      <section class="border-x border-secondary01 py-10 md:py-20 xl:py-[88px]">
-        <div class="text-center">
+      <section
+        class="overflow-x-hidden border-x border-secondary01 pb-10 md:pb-20 xl:pb-[88px]"
+      >
+        <div id="kids-pic" class="pt-10 text-center md:pt-20 xl:pt-[88px]">
           <h3 class="mb-12 text-2xl">設計師與工程師進行攜手合作</h3>
           <!-- 圖片 -->
           <div class="relative px-6 md:px-[36px] xl:px-[110px]">
@@ -136,21 +148,24 @@
               alt=""
             />
 
+            <div class=""></div>
             <!-- !黃色小精靈 -->
             <img
+              id="yellow_kids"
               class="absolute top-1/2 left-[29px] w-[151px] translate-y-[-50%] md:left-[85px] md:w-[186px] lg:left-[120px] xl:w-[278px]"
               src="./dist/img/THE F2E 4TH/WEEK 1/大螢幕 ( 桌機 )/4-l-b.png"
               alt="yellowMan"
             />
             <!-- !藍色小精靈 -->
             <img
+              id="blue_kids"
               class="absolute top-1/2 right-[29px] w-[151px] translate-y-[-50%] md:right-[85px] md:w-[186px] lg:right-[125px] xl:w-[278px]"
               src="./dist/img/THE F2E 4TH/WEEK 1/大螢幕 ( 桌機 )/4-l-c.png"
               alt="blueMan"
             />
 
-            <h3
-              class="writing-lr absolute top-1/2 left-1/2 h-full translate-y-[-50%] translate-x-[-50%] text-xl leading-[1.2] tracking-[0.15em] text-white md:text-2xl lg:text-[40px] xl:text-5xl"
+            <h3 id="kids-h3"
+              class="writing-lr absolute top-1/2 left-1/2 h-full translate-y-[-50%] translate-x-[-50%] text-[8px] leading-[1.2] tracking-[0.15em] text-white md:text-2xl lg:text-[40px] xl:text-5xl"
             >
               互動式網頁設計
             </h3>
