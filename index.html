@@ -49,7 +49,8 @@
     </header>
     <main class="container">
       <!-- banner -->
-      <section class="relative border border-b-0 border-secondary01">
+      <section id="banner-start"  class=" relative border border-b-0 border-secondary01">
+        <div id="banner-kids-bg" class="absolute bg-[#FDF7E7] w-4 h-4 top-[214px] left-[58px]"></div>
         <img
           class="w-full lg:hidden"
           src="./dist/img/Frame 218.png"
@@ -61,7 +62,8 @@
           alt="banner--lg"
         />
         <img
-          class="absolute top-[30%] w-[142px] md:top-[29%] lg:top-[5%] lg:w-[300px] xl:w-auto"
+          id="banner-kids"
+          class=" absolute top-[30%] w-[142px] md:top-[29%] lg:top-[5%] lg:w-[300px] xl:w-auto"
           src="./dist/img/bannerKids.png"
           alt="banner-kids"
         />
@@ -502,7 +504,9 @@
           />
         </div>
         <!-- 圓弧(線) 1320px -->
-        <div class="absolute hidden scale-[1.1] xl:bottom-[-20px] xl:block xl:left-[0.5%]">
+        <div
+          class="absolute hidden scale-[1.1] xl:bottom-[-20px] xl:left-[0.5%] xl:block"
+        >
           <img
             src="./dist/img/THE F2E 4TH/WEEK 1/大螢幕 ( 桌機 )/Line 5.png"
             alt=""
@@ -588,6 +592,5 @@
     <script src="all.js"></script>
   </body>
 
-  <!-- todo fontfamily -->
   <!-- todo 動畫 -->
 </html>

@@ -739,6 +739,38 @@ body {
   bottom: 40.1px;
 }
 
+.top-0 {
+  top: 0px;
+}
+
+.left-0 {
+  left: 0px;
+}
+
+.top-\[\] {
+  top: ;
+}
+
+.top-\[20px\] {
+  top: 20px;
+}
+
+.left-\[\] {
+  left: ;
+}
+
+.left-\[20px\] {
+  left: 20px;
+}
+
+.top-\[214px\] {
+  top: 214px;
+}
+
+.left-\[58px\] {
+  left: 58px;
+}
+
 .isolate {
   isolation: isolate;
 }
@@ -967,6 +999,10 @@ body {
   height: 0.25rem;
 }
 
+.h-4 {
+  height: 1rem;
+}
+
 .w-full {
   width: 100%;
 }
@@ -997,6 +1033,10 @@ body {
 
 .w-1 {
   width: 0.25rem;
+}
+
+.w-4 {
+  width: 1rem;
 }
 
 .flex-shrink {
@@ -1994,6 +2034,20 @@ body {
 .bg-\[rgb\(255\2c 0\2c 0\)\] {
   --tw-bg-opacity: 1;
   background-color: rgb(255 0 0 / var(--tw-bg-opacity));
+}
+
+.bg-black {
+  --tw-bg-opacity: 1;
+  background-color: rgb(0 0 0 / var(--tw-bg-opacity));
+}
+
+.bg-\[\] {
+  background-color: ;
+}
+
+.bg-\[\#FDF7E7\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(253 247 231 / var(--tw-bg-opacity));
 }
 
 .decoration-slice {
