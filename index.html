@@ -25,7 +25,13 @@
   </head>
 
   <body>
-    <header class="py-6">
+    <!-- body opacity -->
+    <div
+      id="navbarCover"
+      class="fixed left-0 z-10 hidden h-screen w-full bg-black opacity-50"
+    ></div>
+    <!-- RWD header -->
+    <header class="sticky top-0 z-10 mb-1 bg-white py-6 lg:relative">
       <div class="container flex items-center justify-between">
         <div class="flex items-center">
           <img class="mr-8" src="./dist/img/Frame 220.png" alt="" />
@@ -39,12 +45,55 @@
         <div class="flex items-center justify-between">
           <a class="btn" href="#">註冊報名</a>
           <a class="btn mr-0 hidden lg:block" href="#">登入</a>
-          <a href="#" class="lg:hidden">
+          <a id="navbarBtn" href="#" class="lg:hidden">
             <span class="material-symbols-outlined text-Secondary01 shrink-0">
               menu
             </span>
           </a>
         </div>
+      </div>
+      <!-- navbarExtends -->
+      <div id="navbarExtends" class="container mt-6 hidden">
+        <ul class="mb-6 border border-secondary01">
+          <li>
+            <a
+              href="https://2022.thef2e.com/news"
+              class="block py-6 text-center text-[20px] leading-[1.2] text-primary01 hover:bg-[#F9D1FF]"
+              >關卡資訊</a
+            >
+          </li>
+          <li>
+            <a
+              href="https://2022.thef2e.com/works"
+              class="block py-6 text-center text-[20px] leading-[1.2] text-primary01 hover:bg-[#F9D1FF]"
+              >作品列表</a
+            >
+          </li>
+          <li>
+            <a
+              href="https://hackmd.io/ofJD4K7iSI65V19zxC7d0w"
+              class="block py-6 text-center text-[20px] leading-[1.2] text-primary01 hover:bg-[#F9D1FF]"
+              >攻略資源</a
+            >
+          </li>
+          <li>
+            <a
+              href="https://2022.thef2e.com/jobs"
+              class="block py-6 text-center text-[20px] leading-[1.2] text-primary01 hover:bg-[#F9D1FF]"
+              >求職專區</a
+            >
+          </li>
+          <li class="flex items-center justify-center">
+            <a
+              href="https://2022.thef2e.com/login"
+              class="group flex w-full justify-center py-4 hover:bg-[#F9D1FF]"
+              ><span
+                class="btn mr-0 inline-block px-10 group-hover:ring-1 group-hover:ring-secondary01"
+                >登入</span
+              ></a
+            >
+          </li>
+        </ul>
       </div>
     </header>
     <main class="container">
@@ -69,7 +118,7 @@
         />
         <img
           id="banner-kids"
-          class=" absolute top-[30%] w-[142px] md:top-[29%] lg:top-[5%] lg:w-[300px] xl:w-auto"
+          class="absolute top-[30%] w-[142px] md:top-[29%] lg:top-[5%] lg:w-[300px] xl:w-auto"
           src="./dist/img/bannerKids.png"
           alt="banner-kids"
         />
@@ -82,14 +131,14 @@
 
       <!-- 你是否也遇到以下問題? -->
       <section
-      id="problem-sec"
+        id="problem-sec"
         class="border-x border-secondary01 bg-[#fdf7e8] py-10 md:py-20 xl:py-[88px]"
       >
         <div class="text-center">
           <h3 class="mb-20 text-2xl">你是否也遇到以下問題？</h3>
           <ul class="container-sm flex flex-col gap-[31px] px-6">
             <li
-              class="relative rounded-[10px] border border-secondary01 bg-white py-4 h-[58px]"
+              class="relative h-[58px] rounded-[10px] border border-secondary01 bg-white py-4"
             >
               <img
                 src="./dist/img/kid01.png"
@@ -100,7 +149,7 @@
               <p id="problem-typing1">&nbsp</p>
             </li>
             <li
-              class="relative rounded-[10px] border border-secondary01 bg-white py-4 h-[58px]"
+              class="relative h-[58px] rounded-[10px] border border-secondary01 bg-white py-4"
             >
               <img
                 src="./dist/img/kid02.png"
@@ -113,7 +162,7 @@
             </li>
 
             <li
-              class="relative rounded-[10px] border border-secondary01 bg-white py-4 h-[58px]"
+              class="relative h-[58px] rounded-[10px] border border-secondary01 bg-white py-4"
             >
               <img
                 src="./dist/img/kid03.png"
@@ -126,7 +175,7 @@
             </li>
           </ul>
         </div>
-      </section> 
+      </section>
 
       <!-- 設計師與工程師進行攜手合作 -->
       <section
@@ -165,8 +214,9 @@
               alt="blueMan"
             />
 
-            <h3 id="kids-h3"
-              class="writing-lr absolute top-1/2 left-1/2 h-full translate-y-[-50%] translate-x-[-50%] text-[8px] leading-[1.2] tracking-[0.15em] text-white md:text-2xl lg:text-[40px] xl:text-5xl"
+            <h3
+              id="kids-h3"
+              class="writing-lr absolute top-1/2 left-1/2 h-full translate-y-[-50%] translate-x-[-50%] text-[12px] leading-[1.2] tracking-[0.15em] text-white xl:text-5xl"
             >
               互動式網頁設計
             </h3>
@@ -376,15 +426,14 @@
               >報名時間</a
             >
             <a id="tab-button" class="w-full cursor-pointer py-6 text-xl"
-              >報名時間</a
+              >登陸作品</a
             >
           </div>
-          <div class="overflow-hidden relative">
-            <img class="scale-[1.4] pb-[30px]"
-              src="./dist/img/THE F2E 4TH/WEEK 1/大螢幕 ( 桌機 )/6-l-a.png"
-              alt=""
-            />
-          </div>
+          <img
+            id="signUpTimeing"
+            src="./dist/img/THE F2E 4TH/WEEK 1/大螢幕 ( 桌機 )/6-l-a.png"
+            alt=""
+          />
         </div>
       </section>
 
@@ -464,34 +513,34 @@
       </section>
 
       <!-- 你要修練的都在The F2E -->
-      <section  class="relative overflow-hidden border-x border-secondary01">
+      <section class="relative overflow-hidden border-x border-secondary01">
         <div id="circle-shit" class="">
           <ul class="loop leading-none">
             <li>
-              <span>THE F2E THE F2E THE F2E THE F2E</span>THE F2E THE F2E THE F2E
-              THE F2E<span></span>
+              <span>THE F2E THE F2E THE F2E THE F2E</span>THE F2E THE F2E THE
+              F2E THE F2E<span></span>
             </li>
             <li>
-              <span>THE F2E THE F2E THE F2E THE F2E</span>THE F2E THE F2E THE F2E
-              THE F2E<span></span>
+              <span>THE F2E THE F2E THE F2E THE F2E</span>THE F2E THE F2E THE
+              F2E THE F2E<span></span>
             </li>
             <li>
-              <span>THE F2E THE F2E THE F2E THE F2E</span>THE F2E THE F2E THE F2E
-              THE F2E<span></span>
+              <span>THE F2E THE F2E THE F2E THE F2E</span>THE F2E THE F2E THE
+              F2E THE F2E<span></span>
             </li>
             <li>
-              <span>THE F2E THE F2E THE F2E THE F2E</span>THE F2E THE F2E THE F2E
-              THE F2E<span></span>
+              <span>THE F2E THE F2E THE F2E THE F2E</span>THE F2E THE F2E THE
+              F2E THE F2E<span></span>
             </li>
             <li>
-              <span>THE F2E THE F2E THE F2E THE F2E</span>THE F2E THE F2E THE F2E
-              THE F2E<span></span>
+              <span>THE F2E THE F2E THE F2E THE F2E</span>THE F2E THE F2E THE
+              F2E THE F2E<span></span>
             </li>
           </ul>
           <!-- 圓弧鬼東西 -->
-          <div id="circle-inner"  class="">
+          <div id="circle-inner" class="">
             <!-- 圓弧 375px-->
-            <div class="absolute bottom-0 scale-[1.01] md:hidden w-full">
+            <div class="absolute bottom-0 w-full scale-[1.01] md:hidden">
               <img class="w-full" src="./dist/img/the f2e 湖.png" alt="" />
             </div>
             <!-- 圓弧 768px -->
@@ -541,7 +590,6 @@
               >
             </div>
           </div>
-
         </div>
         <!-- 跑馬燈 -->
       </section>
@@ -562,7 +610,7 @@
         class="-mt-[500px container border-x border-secondary01 bg-[#fdf7e8] py-10 md:py-20 xl:py-[88px]"
       >
         <div class="text-center">
-          <h3 class="mb-8  text-2xl lg:text-[32px]">贊助單位</h3>
+          <h3 class="mb-8 text-2xl lg:text-[32px]">贊助單位</h3>
         </div>
         <div class="flex justify-center">
           <!-- 板塊設計 -->
@@ -609,6 +657,13 @@
       </div>
     </footer>
 
+    <!-- jquery -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"
+      integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
     <!-- GSAP,ScrollTrigger,TextPlugin -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/ScrollTrigger.min.js"></script>
