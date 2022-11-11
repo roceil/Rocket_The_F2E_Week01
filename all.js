@@ -49,6 +49,46 @@ sm_540.add("(min-width: 540px)", () => {
   );
 });
 
+let md_768 = gsap.matchMedia();
+md_768.add("(min-width: 768px)", () => {
+  const tl = gsap.timeline({
+    scrollTrigger: {
+      trigger: "#banner-kids", // 決定scrolltrigger要以哪一個元素作為觸發基準點
+      markers: true, // 開啟start & end標記點，單純方便瀏覽動畫開始與結束點
+      start: "top 20%", // 決定動畫開始點的位置
+      end: "top 1%", // 決定動畫結束點的位置
+      scrub: true, //重要！開啟scrub來決定動畫播放是否依賴視窗滾動
+    },
+  });
+
+  tl.to("#banner-kids", {
+    y: 120,
+    ease: "none",
+  });
+  tl.to(
+    "#banner-kids-bg",
+    {
+      height: "110px",
+      ease: "none",
+    },
+    "<"
+  );
+
+  tl.to("#banner-kids", {
+    x: 270,
+    ease: "none",
+  });
+
+  tl.to(
+    "#banner-kids-bg",
+    {
+      width: "255px",
+      ease: "none",
+    },
+    "<"
+  );
+});
+
 // 你是否也遇到以下問題-打字
 const problem_sec = document.querySelector("#problem-sec");
 ScrollTrigger.create({
@@ -121,14 +161,13 @@ scroll.to("#kids-h3", {
 const circle_tl = gsap.timeline({
   scrollTrigger: {
     start: "-300px",
-    end: "10px",
+    end: "-50px",
     trigger: "#circle-shit", // 決定scrolltrigger要以哪一個元素作為觸發基準點
-    markers: true, // 開啟start & end標記點，單純方便瀏覽動畫開始與結束點
+    markers: false, // 開啟start & end標記點，單純方便瀏覽動畫開始與結束點
     scrub: true, //重要！開啟scrub來決定動畫播放是否依賴視窗滾動
     // pin:true,
   },
 });
-
 circle_tl.from("#circle-inner", {
   y: "400px",
 });
