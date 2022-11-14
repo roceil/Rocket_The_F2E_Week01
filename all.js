@@ -71,7 +71,7 @@ ScrollTrigger.matchMedia({
     const tl = gsap.timeline({
       scrollTrigger: {
         trigger: "#banner-kids", // 決定scrolltrigger要以哪一個元素作為觸發基準點
-        markers: true, // 開啟start & end標記點，單純方便瀏覽動畫開始與結束點
+        markers: false, // 開啟start & end標記點，單純方便瀏覽動畫開始與結束點
         start: "top 20%", // 決定動畫開始點的位置
         end: "top 1%", // 決定動畫結束點的位置
         scrub: true, // 重要！開啟scrub來決定動畫播放是否依賴視窗滾動
@@ -106,7 +106,7 @@ ScrollTrigger.matchMedia({
     const tl = gsap.timeline({
       scrollTrigger: {
         trigger: "#banner-kids", // 決定scrolltrigger要以哪一個元素作為觸發基準點
-        markers: true, // 開啟start & end標記點，單純方便瀏覽動畫開始與結束點
+        markers: false, // 開啟start & end標記點，單純方便瀏覽動畫開始與結束點
         start: "top 20%", // 決定動畫開始點的位置
         end: "top 1%", // 決定動畫結束點的位置
         scrub: true, // 重要！開啟scrub來決定動畫播放是否依賴視窗滾動
@@ -262,55 +262,58 @@ ScrollTrigger.create({
   },
 });
 
-// 與工程師攜手合作-小精靈動畫
-const scroll = gsap.timeline({
-  scrollTrigger: {
-    start: "top top",
-    end: "+=500",
-    trigger: "#kids-pic", // 決定scrolltrigger要以哪一個元素作為觸發基準點
-    markers: false, // 開啟start & end標記點，單純方便瀏覽動畫開始與結束點
-    scrub: true, // 重要！開啟scrub來決定動畫播放是否依賴視窗滾動
-    pin: true,
-  },
-});
-ScrollTrigger.matchMedia({
-  "(min-width: 540px)": function () {
-    scroll.from("#yellow_kids", {
-      x: -400,
-      duration: 1,
-    });
-    scroll.from(
-      "#blue_kids",
-      {
-        x: 400,
+if (window_size >= 540) {
+  const scroll = gsap.timeline({
+    scrollTrigger: {
+      start: "top top",
+      end: "+=500",
+      trigger: "#kids-pic", // 決定scrolltrigger要以哪一個元素作為觸發基準點
+      markers: true, // 開啟start & end標記點，單純方便瀏覽動畫開始與結束點
+      scrub: true, // 重要！開啟scrub來決定動畫播放是否依賴視窗滾動
+      pin: true,
+    },
+  });
+  ScrollTrigger.matchMedia({
+    "(min-width: 540px)": function () {
+      scroll.from("#yellow_kids", {
+        x: -400,
         duration: 1,
-      },
-      "<"
-    );
-    scroll.to("#kids-h3", {
-      fontSize: "23px",
-      duration: 1,
-    });
-  },
-  "(min-width: 768px)": function () {
-    scroll.to("#kids-h3", {
-      fontSize: "36px",
-      duration: 1,
-    });
-  },
-  "(min-width: 1024px)": function () {
-    scroll.to("#kids-h3", {
-      fontSize: "45px",
-      duration: 1,
-    });
-  },
-  "(min-width: 1320px)": function () {
-    scroll.to("#kids-h3", {
-      fontSize: "50px",
-      duration: 1,
-    });
-  },
-});
+      });
+      scroll.from(
+        "#blue_kids",
+        {
+          x: 400,
+          duration: 1,
+        },
+        "<"
+      );
+      scroll.to("#kids-h3", {
+        fontSize: "23px",
+        duration: 1,
+      });
+    },
+    "(min-width: 768px)": function () {
+      scroll.to("#kids-h3", {
+        fontSize: "36px",
+        duration: 1,
+      });
+    },
+    "(min-width: 1024px)": function () {
+      scroll.to("#kids-h3", {
+        fontSize: "45px",
+        duration: 1,
+      });
+    },
+    "(min-width: 1320px)": function () {
+      scroll.to("#kids-h3", {
+        fontSize: "50px",
+        duration: 1,
+      });
+    },
+  });
+}
+// 與工程師攜手合作-小精靈動畫
+
 
 // const kids_sm_540 = gsap.matchMedia();
 // kids_sm_540.add("all", () => {
