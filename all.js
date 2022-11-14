@@ -16,8 +16,6 @@ $(() => {
   $(tabAry[0]).hover(() => {
     $(tabAry[0]).addClass("bg-white");
     $(tabAry[1]).removeClass("bg-white");
-    console.log("hi");
-
     if (
       signUpTimeing.getAttribute("src") ===
       "./dist/img/THE F2E 4TH/WEEK 1/大螢幕 ( 桌機 )/6-l-b.png"
@@ -60,42 +58,88 @@ gsap.to(".loop", {
   repeat: -1,
 });
 
+window.addEventListener("resize",function(e){
+window.location.reload()
+})
+
+// 判斷螢幕斷點，選取動畫
+const window_size = window.innerWidth;
+
+// 根據斷點，刪除不需要的動畫效果
 ScrollTrigger.matchMedia({
-  "(min-width: 540px)": function () {
+  "(min-width: 1320px)": function () {
     const tl = gsap.timeline({
       scrollTrigger: {
         trigger: "#banner-kids", // 決定scrolltrigger要以哪一個元素作為觸發基準點
-        markers: false, // 開啟start & end標記點，單純方便瀏覽動畫開始與結束點
+        markers: true, // 開啟start & end標記點，單純方便瀏覽動畫開始與結束點
         start: "top 20%", // 決定動畫開始點的位置
         end: "top 1%", // 決定動畫結束點的位置
         scrub: true, // 重要！開啟scrub來決定動畫播放是否依賴視窗滾動
       },
     });
     tl.to("#banner-kids", {
-      y: 60,
+      y: 160,
       ease: "none",
     });
     tl.to(
       "#banner-kids-bg",
       {
-        height: "90px",
+        height: "100px",
         ease: "none",
       },
       "<"
     );
     tl.to("#banner-kids", {
-      x: 200,
+      x: 60,
       ease: "none",
     });
     tl.to(
       "#banner-kids-bg",
       {
-        y: 10,
-        width: "190px",
+        width: "260px",
         ease: "none",
       },
       "<"
     );
+  },
+  "(min-width: 1024px)": function () {
+    const tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: "#banner-kids", // 決定scrolltrigger要以哪一個元素作為觸發基準點
+        markers: true, // 開啟start & end標記點，單純方便瀏覽動畫開始與結束點
+        start: "top 20%", // 決定動畫開始點的位置
+        end: "top 1%", // 決定動畫結束點的位置
+        scrub: true, // 重要！開啟scrub來決定動畫播放是否依賴視窗滾動
+      },
+    });
+    tl.to("#banner-kids", {
+      y: 120,
+      ease: "none",
+    });
+    tl.to(
+      "#banner-kids-bg",
+      {
+        height: "80px",
+        ease: "none",
+      },
+      "<"
+    );
+    tl.to("#banner-kids", {
+      x: 60,
+      ease: "none",
+    });
+    tl.to(
+      "#banner-kids-bg",
+      {
+        width: "140px",
+        ease: "none",
+      },
+      "<"
+    );
+    if (window_size >= 1320) {
+      console.log("抓1024");
+      tl.kill();
+    }
   },
   "(min-width: 768px)": function () {
     const tl = gsap.timeline({
@@ -131,6 +175,50 @@ ScrollTrigger.matchMedia({
       },
       "<"
     );
+    if (window_size >= 1024) {
+      tl.kill();
+    }
+    // tl.kill();
+    // console.log("抓768");
+  },
+  "(min-width: 540px)": function () {
+    const tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: "#banner-kids", // 決定scrolltrigger要以哪一個元素作為觸發基準點
+        markers: false, // 開啟start & end標記點，單純方便瀏覽動畫開始與結束點
+        start: "top 20%", // 決定動畫開始點的位置
+        end: "top 1%", // 決定動畫結束點的位置
+        scrub: true, // 重要！開啟scrub來決定動畫播放是否依賴視窗滾動
+      },
+    });
+    tl.to("#banner-kids", {
+      y: 60,
+      ease: "none",
+    });
+    tl.to(
+      "#banner-kids-bg",
+      {
+        height: "90px",
+        ease: "none",
+      },
+      "<"
+    );
+    tl.to("#banner-kids", {
+      x: 200,
+      ease: "none",
+    });
+    tl.to(
+      "#banner-kids-bg",
+      {
+        y: 10,
+        width: "190px",
+        ease: "none",
+      },
+      "<"
+    );
+    if (window_size >= 768) {
+      tl.kill();
+    }
   },
 });
 
@@ -279,8 +367,8 @@ circle_tl.from("#circle-inner", {
   y: "400px",
 });
 
-//卡片翻轉動畫
-gsap.utils.toArray(".cardCont").forEach(function (card) {
+// 卡片翻轉動畫
+gsap.utils.toArray(".cardCont").forEach((card) => {
   gsap.set(card, {
     transformStyle: "preserve-3d",
     transformPerspective: 1000,
@@ -297,10 +385,10 @@ gsap.utils.toArray(".cardCont").forEach(function (card) {
     .to(back, { duration: 1, rotationY: 0 }, 0)
     .to(card, { z: 50 }, 0)
     .to(card, { z: 0 }, 0.5);
-  card.addEventListener("mouseenter", function () {
+  card.addEventListener("mouseenter", () => {
     tl.play();
   });
-  card.addEventListener("mouseleave", function () {
+  card.addEventListener("mouseleave", () => {
     tl.reverse();
   });
 });
