@@ -31,7 +31,7 @@ module.exports = {
         primary02: "#F8CC46",
         primary02_dark: "#DFB73F",
         primary02_light: "#FFE79E",
-        primary03: "##79EAEE",
+        primary03: "#79EAEE",
         primary03_dark: "#6DD2D6",
         secondary01: "#E335FF",
         secondary01_light: "#F9D1FF",

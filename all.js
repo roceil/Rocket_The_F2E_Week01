@@ -134,82 +134,6 @@ ScrollTrigger.matchMedia({
   },
 });
 
-// banner-kids動畫設定
-// const sm_540 = gsap.matchMedia();
-// sm_540.add("(min-width: 540px)", () => {
-//   const tl = gsap.timeline({
-//     scrollTrigger: {
-//       trigger: "#banner-kids", // 決定scrolltrigger要以哪一個元素作為觸發基準點
-//       markers: false, // 開啟start & end標記點，單純方便瀏覽動畫開始與結束點
-//       start: "top 20%", // 決定動畫開始點的位置
-//       end: "top 1%", // 決定動畫結束點的位置
-//       scrub: true, // 重要！開啟scrub來決定動畫播放是否依賴視窗滾動
-//     },
-//   });
-//   tl.to("#banner-kids", {
-//     y: 60,
-//     ease: "none",
-//   });
-//   tl.to(
-//     "#banner-kids-bg",
-//     {
-//       height: "90px",
-//       ease: "none",
-//     },
-//     "<"
-//   );
-//   tl.to("#banner-kids", {
-//     x: 200,
-//     ease: "none",
-//   });
-//   tl.to(
-//     "#banner-kids-bg",
-//     {
-//       y: 10,
-//       width: "190px",
-//       ease: "none",
-//     },
-//     "<"
-//   );
-// });
-
-// const md_768 = gsap.matchMedia();
-// md_768.add("(min-width: 768px)", () => {
-//   const tl = gsap.timeline({
-//     scrollTrigger: {
-//       trigger: "#banner-kids", // 決定scrolltrigger要以哪一個元素作為觸發基準點
-//       markers: false, // 開啟start & end標記點，單純方便瀏覽動畫開始與結束點
-//       start: "top 20%", // 決定動畫開始點的位置
-//       end: "top 1%", // 決定動畫結束點的位置
-//       scrub: true, // 重要！開啟scrub來決定動畫播放是否依賴視窗滾動
-//     },
-//   });
-//   tl.to("#banner-kids", {
-//     y: 120,
-//     ease: "none",
-//   });
-//   tl.to(
-//     "#banner-kids-bg",
-//     {
-//       height: "110px",
-//       ease: "none",
-//     },
-//     "<"
-//   );
-//   tl.to("#banner-kids", {
-//     x: 270,
-//     ease: "none",
-//   });
-//   tl.to(
-//     "#banner-kids-bg",
-//     {
-//       width: "255px",
-//       ease: "none",
-//     },
-//     "<"
-//   );
-// });
-
 // 你是否也遇到以下問題-打字
 const problem_sec = document.querySelector("#problem-sec");
 ScrollTrigger.create({
@@ -353,4 +277,30 @@ const circle_tl = gsap.timeline({
 });
 circle_tl.from("#circle-inner", {
   y: "400px",
+});
+
+//卡片翻轉動畫
+gsap.utils.toArray(".cardCont").forEach(function (card) {
+  gsap.set(card, {
+    transformStyle: "preserve-3d",
+    transformPerspective: 1000,
+  });
+  const q = gsap.utils.selector(card);
+  const front = q(".cardFront");
+  const back = q(".cardBack");
+
+  gsap.set(back, { rotationY: -180 });
+
+  const tl = gsap
+    .timeline({ paused: true })
+    .to(front, { duration: 1, rotationY: 180 })
+    .to(back, { duration: 1, rotationY: 0 }, 0)
+    .to(card, { z: 50 }, 0)
+    .to(card, { z: 0 }, 0.5);
+  card.addEventListener("mouseenter", function () {
+    tl.play();
+  });
+  card.addEventListener("mouseleave", function () {
+    tl.reverse();
+  });
 });
