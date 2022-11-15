@@ -58,12 +58,17 @@ gsap.to(".loop", {
   repeat: -1,
 });
 
-window.addEventListener("resize",function(e){
-window.location.reload()
-})
 
 // 判斷螢幕斷點，選取動畫
 const window_size = window.innerWidth;
+
+
+window.addEventListener("resize", (e) => {
+  let newSize = window.innerWidth
+  if (newSize !== window_size) {
+    window.location.reload();
+  }
+});
 
 // 根據斷點，刪除不需要的動畫效果
 ScrollTrigger.matchMedia({
@@ -313,7 +318,6 @@ if (window_size >= 540) {
   });
 }
 // 與工程師攜手合作-小精靈動畫
-
 
 // const kids_sm_540 = gsap.matchMedia();
 // kids_sm_540.add("all", () => {
